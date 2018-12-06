@@ -1,0 +1,27 @@
+{
+  "name": "wheels",
+  "version": "1.0.0",
+  "description": "最基础的前端组件实现",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dreamfly666/wheels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dreamfly666/wheels/issues"
+  },
+  "homepage": "https://github.com/Dreamfly666/wheels#readme",
+  "devDependencies":{
+    "webpack":"^3.10.0",
+    "browser-sync":"^2.24.6",
+    "gulp":"^3.9.1"
+}
+}

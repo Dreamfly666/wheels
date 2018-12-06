@@ -1,12 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>tabs</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            background: #e2ded2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 460px;
+            margin-top: 3em;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .wrapper::before {
+            content: '';
+            z-index: -1;
+            display: block;
+            position: absolute;
+            top: -2px;
+            bottom: -2px;
+            left: -2px;
+            right: -2px;
+            border: 1px solid #000;
+            border-radius: 6px;
+        }
+
+        .tab {
+            background: #f2f1ec;
+        }
+
+        .tabs ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabs ul:first-child {
+            display: flex;
+            border: 1px solid #b8b3ae;
+            border-bottom: none;
+        }
+
+        .tabs ul:first-child>li {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #e5dfd3 0%, #d0c9b8 100%);
+            color: #847E6F;
+            text-shadow: 1px 1px 1px white;
+            box-shadow: inset 0 0 2px hsla(0, 0%, 0%, 0.15);
+        }
+
+        .tabs ul:first-child>li.active {
+            background: linear-gradient(to bottom, white 0%, #F0EDE6 100%);
+            color: #222222;
+            box-shadow: none;
+        }
+
+        .tabs ul:nth-child(2) {
+            border: 1px solid #B8B3AE;
+            border-top: none;
+            background: #F0EDE6;
+        }
+
+        .tabs ul:nth-child(2)>li {
+            display: none;
+            min-height: 5em;
+            overflow: hidden;
+        }
+
+        .tabs ul:nth-child(2)>li.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #DFDCD3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            color: #333;
+            margin:5em 0;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!--  外围 -->
+    <div class="wrapper">
+        <div class="tabs">
+            <!-- 选项 -->
+            <ul class="tabs-nav" data-role="tabs-nav">
+                <li>
+                    how buying works
+                </li>
+                <li class="active">
+                    how seeling works
+                </li>
+            </ul>
+            <!-- 面板 -->
+            <ul class="tabs-class" data-role="tabs-panes">
+                <li class="">
+                    <div class="circle">
+                        1
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="circle">
+                        2
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="../lib/dom/index.js"></script>
+    <!-- <script src="../lib/test.js"></script> -->
+    <!-- <script src="view-source.js"></script> -->
+    <script src="../lib/tabs/index.js"></script>
 </body>
+
 </html>

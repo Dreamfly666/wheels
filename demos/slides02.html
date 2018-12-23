@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slides</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    #container{
+        position: relative;
+        overflow: hidden;
+        width: 600px;
+        height: 400px;
+        border: 3px solid #333;
+        
+    }
+    .slide-item{
+        float: left;
+        width: 600px;
+        height:400px;
+    }
+    #list{
+        position: absolute;
+        /* 脱离文档流不能撑开父元素 */
+        z-index: 1;
+        width: 3600px;
+    }
+    #buttons{
+        position: absolute;
+        z-index: 2;
+        bottom: 20px;
+        left: 250px;
+        height: 10px;
+        width: 100px;
+
+    }
+    #buttons span{
+        float: left;
+        margin-left: 10px;
+        width: 10px;
+        height: 10px;
+        background: greenyellow;
+        line-height: 10px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    #buttons span.on{
+        cursor: pointer;
+        background: orange;
+    }
+    .arrow{
+        position: absolute;
+        z-index: 2;
+        top: 180px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: none;
+        font-size: 36px;
+        font-weight: 800;
+        color:gray;
+        line-height: 39px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .arrow:hover{
+        background: rgba(0,0,0,.3);
+    }
+    #container:hover .arrow{
+        display: block;
+    }
+    #prev{
+        left:20px;
+    }
+    #next{
+        right: 20px;
+    }
+    .slide-item{
+        float: left;
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="list" style="left:-600px">
+             <img class="slide-item" src="../static/img/timg.jpg" alt="">
+            <img class="slide-item" src="../static/img/timg (1).jpeg" alt="">
+            <img class="slide-item" src="../static/img/timg (2).jpeg" alt="">
+            <img class="slide-item" src="../static/img/timg (3).jpeg" alt="">
+            <img class="slide-item" src="../static/img/timg.jpg" alt="">
+            <img class="slide-item" src="../static/img/timg (1).jpeg" alt="">
+        </div>
+    <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+    </div>
+    <a href="javascript:"; class="arrow" id="prev">&lt;</a>
+    <a href="javascript:"; class="arrow" id="next">&gt;</a>
+    </div>
+    <script src="../lib/slides02/index.js"></script>
+</body>
+</html>
+

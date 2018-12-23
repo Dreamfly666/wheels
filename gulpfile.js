@@ -5,7 +5,7 @@ gulp.task('browser-sync',function(){
         files:['./lib/**/*.js','./demos/*.html'],
         server:{
             baseDir:'./',
-            index:'demos/base.html'
+            index:'demos/slides02.html'
         },
         port:8010
     })
